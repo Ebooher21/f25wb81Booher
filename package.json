@@ -16,5 +16,14 @@
   "main": "app.js",
   "author": "Ebooher21",
   "license": "ISC",
-  "description": ""
+  "description": "created the server repo\r [Render Page](https://f25wb81booher.onrender.com)",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ebooher21/f25wb81Booher.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ebooher21/f25wb81Booher/issues"
+  },
+  "homepage": "https://github.com/Ebooher21/f25wb81Booher#readme"
 }

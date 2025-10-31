@@ -3,4 +3,14 @@ extends layout
 block content
   h1= title
   p I love waffles
-  button(type="button", class="btn btn-secondary") Sample Button 
+  button(type="button", class="btn btn-secondary", onclick="faster()") Sample Button
+  div(id="faster") add in extra 
+  script.
+    var value = 1
+    var amt = 2
+
+    function faster() {
+      amt = amt * 2
+      value += amt
+      document.getElementById("faster").innerHTML = `Faster ${value} times ${amt}`
+    }
