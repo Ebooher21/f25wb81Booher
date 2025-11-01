@@ -2,3 +2,8 @@ extends layout
 
 block content
   h1= title
+  - let results = [{colour: 'Red', size: 'Small', age: 100},{colour: 'Green', size: 'Medium', age:10},{colour: 'Blue', size: 'Large', age: 45}]
+  div(class="container-fluid")
+    div(class="row")
+      each item in results
+        div(class="col-sm-2") Colour: #{item.colour}<br>Size: #{item.size}<br>Age: #{item.age}
