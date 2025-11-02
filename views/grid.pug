@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p #{query.rows} #{query.cols}
+  - let rows = Number(query.rows)
+  - let cols = Number(query.cols)
+  if !Number.isInteger(rows)
+    p rows is not an integer
+  if !Number.isInteger(cols)
+    p cols is not an integer
+  if rows > 13 || rows < 3
+    p rows is out of range
+  else if cols > 13 || cols < 3
+    p cols is out of range
+  else
+    table(id="outer")
+      - for(let y=0; y<rows; y++) {
+        tr(id="middle")
+          - for(let x=0; x<cols; x++) {
+            td= y + x * 2
+          - }
+      - }
