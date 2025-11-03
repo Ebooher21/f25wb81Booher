@@ -2,4 +2,9 @@ extends layout
 
 block content
   h1= title
-  
+  - let image_names = ['baby', 'goofy', 'strong', 'group', 'mad']
+  - for(let x = 0; x < 3; x++) {
+    - let num = Math.floor(Math.random()*5)
+    - let img = image_names[num]
+    img(src=`images/${img}.jpg`, alt=`${img}`, height=500, width=500)
+  - }
