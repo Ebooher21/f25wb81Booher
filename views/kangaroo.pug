@@ -6,4 +6,8 @@ block content
   div(class="container-fluid")
     div(class="row")
       each item in results
-        div(class="col-sm-2") Colour: #{item.colour}<br>Size: #{item.size}<br>Age: #{item.age}
+        div(class="col-sm-2", onclick=`buy(${results.indexOf(item)})`) Colour: #{item.colour}<br>Size: #{item.size}<br>Age: #{item.age}
+  script.
+    function buy(index) {
+      alert(`You purchased kangaroo ${index}`);
+    }
